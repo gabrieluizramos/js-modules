@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Silanet - Acesso</title>
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- FONT-AWESOME -->
+	<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+</head>
+<body class="body">
+	<div class="wrapper">
+		<h1 class="title">login</h1>
+		<form action="" class="form">
+			<fieldset class="fieldset fa fa-user">
+				<input type="text" class="input" name="ctl00$header1$txtLogin0" placeholder="login">
+			</fieldset>
+			<fieldset class="fieldset fa fa-lock">
+				<input type="password" class="input" name="ctl00$header1$txtSenha" placeholder="senha" data-see="password">
+				<span class="ver-senha" data-see="trigger"><i class="fa fa-eye" aria-hidden="true"></i></span>
+			</fieldset>
+			<div>
+				<fieldset class="fieldset">
+					<input id="ctl00_header1_rdbCliente" type="radio" name="ctl00$header1$loginType" value="rdbCliente" checked="checked"><label class="legenda" for="ctl00_header1_rdbCliente">Cliente</label>
+				</fieldset>
+				<fieldset class="fieldset">
+					<input id="ctl00_header1_rdbRepresentante" type="radio" name="ctl00$header1$loginType" value="rdbRepresentante"><label class="legenda" for="ctl00_header1_rdbRepresentante">Representante</label>
+				</fieldset>
+				<fieldse>
+					<input id="ctl00_header1_rdbAuditor" type="radio" name="ctl00$header1$loginType" value="rdbAuditor"><label class="legenda" for="ctl00_header1_rdbAuditor">Auditor</label>
+				</fieldset>
+			</div>
+			<button class="btn-enviar">Acessar</button>
+		</form>
+	</div>
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/modules/login.js"></script>
+	<script>
+		login.init({
+			actionType : 'click' ,
+			elements : {
+				seeker : '[data-see="trigger"]' ,
+				password : '[name="ctl00$header1$txtSenha"]' ,
+				user : '[name="ctl00$header1$txtLogin0"]'
+			}
+		});
+	</script>
+</body>
+</html>

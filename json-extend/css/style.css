@@ -1,0 +1,104 @@
+
+* {
+	margin:0;
+	padding:0;
+	border:none;
+	text-decoration:none;
+	list-style:none;
+	vertical-align:baseline;
+	box-sizing: border-box;
+	z-index:0;
+	outline:none;
+	font-family:'Trebuchet MS';
+}
+html , .body{
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	font-size:;
+	background:#e4ebef;
+}
+.wrapper{
+	width:95%;
+	height:100%;
+	max-width: 1174px;
+	margin:0 auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	flex-direction:column;
+}
+.form{
+	width:300px;
+	padding:10px;
+	max-width: 100%;
+	display: block;
+	background:rgba(255,255,255,0.2);
+}
+.fieldset{
+	position:relative;
+	width: 100%;
+	display: block;
+}
+.fieldset:before{
+	position:absolute;
+	left:10px;
+	top:10px;
+	color:gainsboro;
+}
+.input{
+	width: 100%;
+	display: block;
+	padding:10px 15px 10px 35px;
+	margin-bottom:15px;
+	max-width: 100%;
+}
+.legenda{
+	display: inline-block;
+	padding-left:5px;
+	color:#31528c;
+}
+.ver-senha{
+	position:absolute;
+	right:5px;
+	top:20%;
+	cursor:pointer;
+	color:#b0cd49;
+}
+.ver-senha[data-active="true"]{
+	color:#384606;
+}
+.btn-enviar{
+	background-color:#b0cd49;
+	display: block;
+	width:100%;
+	font-size:20px;
+	padding:10px;
+	margin:10px auto;
+	text-align:center;
+	color:#FFF;
+	cursor:pointer;
+	text-transform:uppercase;
+}
+.title ,
+.subtitle{
+	text-align:center;
+}
+.title , .subtitle{
+	color:#b0cd49;
+}
+.subtitle{
+	font-size:16px;
+}
+.blue{
+	color:#31528c;
+}
