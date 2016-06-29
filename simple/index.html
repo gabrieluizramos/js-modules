@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var pessoaIIFE = (function(){
+			this.nome = "Gabriel";
+			this.idade = 20;
+			this.apresentar = function(){
+				console.log( 'ola! meu nome e '+this.nome+' e minha idade e '+this.idade );
+			}
+			return this;
+		})();
+
+		var pessoaRETURNED = (function(){
+			return {
+				nome : "Gabriel" , 
+				idade : 20 ,
+				apresentar : function(){
+					console.log(  "ola! meu nome e "+pessoaRETURNED.nome+" e minha idade e "+pessoaRETURNED.idade );
+				}
+			}
+		})();
+
+		var pessoaREVEALED = (function(){
+			var _nome = "Gabriel";
+			var _idade = 20;
+			var _apresentar = function(){
+				console.log( 'ola! meu nome e '+ nome+' e minha idade e '+ idade );
+			}
+			return{
+				nome : _nome,
+				idade : _idade,
+				apresentar : _apresentar
+			};
+		})();
+
+		var pessoaJSON = {
+			nome : "Gabriel" ,
+			idade : 20 ,
+			apresentar : function(){
+				console.log( 'ola! meu nome e '+ pessoaJSON.nome +' e minha idade e '+pessoaJSON.idade );
+			}
+		} 
+
+
+		window.namespaces = {
+			modules : {}
+		};
+		namespaces.modules.calculos = (function(){
+			return{
+				nome: "gabriel"
+			};
+		})();
+
+	</script>
+</body>
+</html>
